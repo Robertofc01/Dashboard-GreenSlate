@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/819dc6e1f7.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Dashboard GreenSlate</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <div class="GS-icon"><img src="/img/icono white GS.png" alt=""></div>
+                        <span class="title"><h2>GREENSLATE</h2></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fas fa-globe"></i></span>
+                    <span class="title">All</span>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="far fa-user-circle"></i></i></span>
+                    <span class="title">PC Accounts</span>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fas fa-envelope-open-text"></i></span>
+                    <span class="title">PCard Accounts</span>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fas fa-industry"></i></span>
+                    <span class="title">Production Accounts</span>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                    <span class="title">Project View</span>
+                    </a>    
+                </li>
+                <li>
+                    <a href="#">
+                    <span class="icon"><i class="fas fa-plus"></i></span>
+                    <span class="title">Create New</span>
+                    </a>    
+                </li>
+
+            </ul>
+        </div>
+    
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle" onclick="toggleMenu()";></div>
+                    <div class="search">
+                        <label>
+                            <input type="text" placeholder="search here">
+                            <i class="fas fa-search"></i>
+                        </label>
+                    </div>
+                        <div class="user">
+                            <img src="/img/user.png" alt="">
+                        </div>
+            </div>
+
+            <!-- Seccion busqueda por filtro -->
+
+            <div class="filterSearch">
+                <div>
+                    <h4>Search by filters</h4>
+                </div>
+                <div class="form">
+
+                    <form>
+                        <input type="checkbox" name="project1" value="project">
+                        <label for="project1"> Show all projects</label><br>
+                    
+                        <input type="checkbox" name="project2" value="project">
+                        <label for="project2"> Show sets</label><br>
+                    
+                        <input type="checkbox" name="project3" value="project">
+                        <label for="project3"> Show uncommited POs</label><br>
+                    
+                        <input type="checkbox" name="project4" value="project">
+                        <label for="project4"> Show inactive</label><br>
+                    
+                        <input type="checkbox" name="project5" value="project">
+                        <label for="project5"> Supress zeros</label><br>
+                    
+                        <input type="checkbox" name="project6" value="project">
+                        <label for="project6"> Negative ETCs</label><br>
+                    
+                        <input type="checkbox" name="project7" value="project">
+                        <label for="project7"> Negative EFCs</label><br>
+                    
+                        <input type="checkbox" name="project8" value="project">
+                        <label for="project8"> Show YE</label><br>
+                    </form>
+
+                </div>
+                <div>
+                    <a href="#" class='btn-filter'>Search</a>
+                </div>               
+            </div>
+
+            <!----------------------------datos-------------------------------------->
+            
+
+            <div class="titleCards">Cost Report Totals</div>
+
+            <div class="cardBox">
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">2,020.00</div>
+                        <div class="cardName">Actual Cost:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-money-check-alt"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">0.00</div>
+                        <div class="cardName">POs:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">2,020.00</div>
+                        <div class="cardName">Total Cost:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-box"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">236,225.00</div>
+                        <div class="cardName">ETC:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div>
+                        <div class="numbers">238,245.00</div>
+                        <div class="cardName">EFC:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-file-medical-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">240,145.00</div>
+                        <div class="cardName">Budget:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-funnel-dollar"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">0.00</div>
+                        <div class="cardName">App Overage:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <div>
+                        <div class="numbers">1,900.00</div>
+                        <div class="cardName">Variance:</div>
+                    </div>
+                    <div class="iconBox">
+                        <i class="fas fa-file-import"></i>
+                    </div>
+                </div>
+
+            </div>
+            <!-------------------------------- tabla de datos ------------------------------>
+            <div class="details">
+                <div class="recentAccounts">
+                    <div class="cardHeader">
+                        <h2>Chart Of Accounts</h2>
+                        <a href="#" class='btn'>View All</a>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>Description</td>
+                                <td>Account</td>
+                                <td>Acc Type</td>
+                                <td>Curr</td>
+                                <td>Actual Cost</td>
+                                <td>POs</td>
+                                <td>Total Cost</td>
+                                <td>ETC</td>
+                                <td>EFC</td>
+                                <td>Budget</td>
+                                <td>App Overage</td>
+                                <td>Variance</td>
+                                <td>Status</td>
+                                <td>Acct Description</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+
+                                                        <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                       
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>Checking account</td>
+                                <td>010-01</td>
+                                <td>CK</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">010-00-Bank accounts-ck-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>020-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">020-00-Petty cash-pc-all</span></td>
+                            </tr>
+                            
+                            <tr>
+                                <td>PC Custodian</td>
+                                <td>030-01</td>
+                                <td>PC</td>
+                                <td>All</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>1,020.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>0.00</td>
+                                <td>Active</td>
+                                <td><span class="Acct-description">030-00-Deposits-dp-all</span></td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    <script>
+        function toggleMenu(){
+            let toggle = document.querySelector('.toggle');
+            let navigation = document.querySelector('.navigation');
+            let main = document.querySelector('.main');
+            toggle.classList.toggle('active');
+            navigation.classList.toggle('active');
+            main.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

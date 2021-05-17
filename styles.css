@@ -1,0 +1,442 @@
+/*--------------------------insumos
+verde 01 = #00ad46
+verde 02 = #144635
+----------------------------------*/
+/*General*/
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+/*ocultar contenido excedente*/
+body{
+    overflow-x: hidden;
+}
+/*contenedor general*/
+.container{
+    position: relative;
+    width: 100%;
+}
+/*------------------------------------barra menu------------------------------------*/
+/*panel lateral*/
+.navigation{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: #2b963c;
+    transition: 0.5s;
+    overflow: hidden; /*cortar visibilidad*/
+}
+/*solo iconos menu lateral*/
+.navigation.active{
+    width: 60px;
+}
+/*lista desordenanda menu*/
+.navigation ul{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+}
+/*lista menu*/
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+}
+/*efecto seleccion menu*/
+.navigation ul li:hover{
+    background-color: #6fdd3d;
+}
+/*margen inferior logo greenslate*/
+.navigation ul li:nth-child(1){
+    margin-bottom: 40px;
+}
+/*fondo logo GS*/
+.navigation ul li:nth-child(1):hover{
+    background: transparent;
+}
+/*Color topografia logo*/
+.navigation ul li a h2{
+    color: #0b3f2d;
+    margin-left: 0;
+}
+/*estética links lista menu*/
+.navigation ul li a{
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: #fff;
+}
+/*ubicacion individual iconos menu*/
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+/*estética iconos menu*/
+.navigation ul li a .icon .fa{
+    color: #fff;
+    font-size: 24px;
+}
+/*icono blanco*/
+.navigation ul li img{
+    max-height: 40px;
+    margin: 10px;
+}
+ /*items menu ubic proporcion*/
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    white-space: nowrap;
+}
+/*sección panel central*/
+.main{ 
+    position: absolute;
+    width:calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh; /*100% del area de visualizacion*/
+    background: #dbdbdb;
+    transition: 0.5s;
+}
+/*accion menu panel central al ocultar lateral*/
+.main.active{
+    width:calc(100% - 60px);
+    left: 60px;
+}
+/*barra superior - header*/
+.main .topbar{
+    width: 100%;
+    background: #fff;
+    height: 60px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/*icono menu lateral*/
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+/*icono menu por unicode*/
+.toggle::before{
+    content: '\f0c9';
+    font-family: fontAwesome;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    line-height: 60px;
+    font-size: 24px;
+    text-align: center;
+    color: #0b3f2d
+}
+/*proporcion buscardor*/
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+/*proporcion buscador adaptativo*/
+.search label{
+   position: relative;
+   width: 100%; /*100% de los 400px*/ 
+}
+/*estética buscador*/
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px; /*margen traslape icono lupa*/
+    outline: none;
+    border: 1px solid #0b3f2d;
+}
+/*posición icono buscador*/
+.search label .fas{
+    position: absolute;
+    left: 15px;
+    top: 4px;
+}
+/*proporcion avatar usuario*/
+.user{
+    position: relative;
+    min-width: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+/*ubicación avatar*/
+.user img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*-----------------------------------busqueda filtros------------------------------------*/
+.filterSearch{
+    width: 100%;
+    height: 120px;
+    padding: 20px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2rf 1fr;
+}
+.filterSearch form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    position: relative;
+}
+.filterSearch form input{
+    top: 0%;
+    margin-top: 2px;
+    margin-left: 1em;
+    margin-right: 1em;
+} 
+.filterSearch .btn-filter{
+    position: relative;
+    left: 0%;
+    width: 80px;
+    margin-top: 90px;
+    margin-left:20px;
+    padding: 10px 10px;
+    background: #6fdd3d;
+    color: #315f1c;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+/*-----------------------------------panel central------------------------------------*/
+/*tarjetas datos general*/
+.cardBox{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*4 columnas de 1 fraccion c/u*/
+    grid-gap: 20px;
+}
+/*tarjetas datos grupo*/
+.cardBox .card{
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    border-radius: 6px;
+}
+/*tarjetas datos numeros*/
+.cardBox .card .numbers{
+    position: relative;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+/*tarjetas datos descrip*/
+.cardBox .card .cardName{
+   color: #999; 
+}
+/*tarjetas iconos*/
+.cardBox .card .iconBox{
+   font-size: 2em;
+   margin: 10px;
+   color: #00ad46;
+}
+/*Cabecera descrip general*/
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    padding-top: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 2rf 1fr;
+}
+/*Seccion principal main*/
+.titleCards{
+    color: #1b1b1b;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+.details .recentAccounts{
+    position: relative;
+    min-height: 530px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+}
+/*Titulo categorias*/
+.cardHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/*especifico nombre*/
+.cardHeader h2{
+    font-weight: 600;
+}
+/*boton cargar todos*/
+.btn{
+    position: relative;
+    padding: 5px 10px;
+    background: #6fdd3d;
+    color: #315f1c;
+    text-decoration: none;
+    border-radius: 4px;
+}
+/*-----------------------------------seccion datos------------------------------------*/
+/*tabla*/
+.details table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+/*individual cabeceras tabla*/
+.details table thead td{
+    font-weight: bolder;
+}
+/*Estética tabla */
+.details .recentAccounts table tr{
+   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+/*guia visual datos tabla*/
+.details .recentAccounts table tbody tr:hover{
+    background-color: #6fdd3d;
+    color: #ffffff;
+}
+/*borrar ultima linea visual tabla*/
+.details .recentAccounts table tbody tr:last-child{
+    border-bottom: none;
+}
+/*visual linea de datos*/
+.details .recentAccounts table tr td{
+    padding: 9px 5px;
+}
+/*alineado ultima columna tabla - visual*/
+.details .recentAccounts table thead tr td:last-child,
+.details .recentAccounts table tbody tr td:last-child{
+    text-align: right;
+}
+/*alineado columna numerica - visual*/
+.details .recentAccounts table thead tr td:nth-child(2),
+.details .recentAccounts table tbody tr td:nth-child(2){
+    text-align: right;
+    padding-right: 20px;
+}
+/*alineado columna numerica - visual*/
+.details .recentAccounts table thead tr td:nth-child(3),
+.details .recentAccounts table tbody tr td:nth-child(3){
+    text-align: center;
+}
+/*visual guía ultima columna*/
+.Acct-description{
+    position: relative;
+    padding: 2px 4px;
+    background-color: #2b963c;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/*-----------------------------módulo responsivo / adptativo ----------------------------*/
+
+@media (max-width: 992px){   
+    /*máximo*/
+    .navigation{
+        left: -300px;
+    }
+    .navigation.active{
+        left: 0px;
+        width: 300px;
+    }
+    /*Intermedio*/
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .main.active{
+        width: calc(100% - 300px);
+        left: 300px;
+    }
+    .form{
+        left: -300px;
+        grid-template-columns: repeat(4,1fr);;
+    }
+
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media (max-width: 758px){
+    .details{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+/*mínimo*/
+@media (max-width: 480px){
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .details .recentAccounts{
+        overflow-x: auto;
+    }
+    .details .recentAccounts table{
+        width: 600px;
+    }
+    .navigation{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .form{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .navigation.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle.active{
+        position: fixed;
+        z-index: 1000;
+        right: 0;
+        left: initial;
+    }
+    .toggle.active::before{
+        color: #fff;
+    }
+    .main, .main.active{
+        width: 100%;
+        left: 0;
+    }
+}
+
+
+                        
